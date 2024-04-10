@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Tenants\Welcome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome');
-});
+// Route::get('/home', function () {
+//     return view('welcome');
+// });
+
+Route::get('/home', Welcome::class)->name('central-home');
