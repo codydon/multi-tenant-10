@@ -8,8 +8,6 @@
 ## END OF app/Livewire/Tenants/Welcome.php
 ## routes/web.php
 ## END OF routes/web.php
-## resources/views/livewire/tenants/welcome.blade.php
-## END OF resources/views/livewire/tenants/welcome.blade.php
 ## tailwind.config.js
 ## END OF tailwind.config.js
 .example
@@ -25,7 +23,11 @@
 ## END OF app/Livewire/Tenants/ViewTenants.php
 ## .env
 ## END OF .env
-
+## resources/views/livewire/tenants/welcome.blade.php
+## END OF resources/views/livewire/tenants/welcome.blade.php
 ## resources/views/livewire/tenants/view-tenants.blade.php
-
 ## END OF resources/views/livewire/tenants/view-tenants.blade.php
+
+## README.md
+
+## END OF README.md

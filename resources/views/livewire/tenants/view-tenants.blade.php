@@ -4,12 +4,15 @@
     @endsection
     <div class="flex justify-between items-center">
         <div><x-bladewind::input label="Full name" /></div>
-        <a wire:navigate href={{ route('central-manage-tenants') }}
+       <div class="flex items-center gap-2">
+        <a class="text-red-500" href={{ route('central-home') }}>HOME</a>
+         <a wire:navigate href={{ route('central-manage-tenants') }}
             class="bg-blue-500 hover:bg-blue-700 px-4 py-4 flex gap-2 items-center rounded-md text-white">
             <x-bladewind::icon name="plus" />
             <span> Add tenant</span>
 
         </a>
+       </div>
     </div>
 
 
