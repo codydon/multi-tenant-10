@@ -11,6 +11,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.4",
+        "mkocansey/bladewind": "^2.5",
         "stancl/tenancy": "^3.8"
     },
     "require-dev": {

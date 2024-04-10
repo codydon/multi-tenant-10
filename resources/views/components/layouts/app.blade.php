@@ -12,10 +12,27 @@
             {{ config('app.name') }}
         @endif
     </title>
+    <link href="{{ asset('vendor/bladewind/css/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/bladewind/css/bladewind-ui.min.css') }}" rel="stylesheet" />
+    <script src="{{ asset('vendor/bladewind/js/helpers.js') }}"></script>
     @vite('resources/css/app.css')
 </head>
 
 <body>
+    <div>
+        @if (session()->has('error'))
+            <div class="px-4 py-2 rounded text-white bg-red-500">
+                {{ session('error') }}
+            </div>
+            @if (session()->has('success'))
+               <div class="px-4 py-2 rounded text-white bg-green-500">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+        @endif
+
+    </div>
     {{ $slot }}
 </body>
 

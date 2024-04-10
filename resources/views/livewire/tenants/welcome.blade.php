@@ -14,5 +14,13 @@
                 <span class="text-red-500">{{ $message }}</span>
             @enderror
         </div>
+
+        <div class="flex gap-8 flex-wrap py-5 text-blue-500">
+            <a href="{{route('central-view-tenants')}}"> view tenants</a>
+            <a href="{{route('central-manage-tenants')}}"> Manage tenants</a>
+        </div>
+
+
+
     </div>
 </div>

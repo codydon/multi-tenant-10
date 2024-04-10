@@ -1,7 +1,9 @@
 <?php
 
 use App\Livewire\Tenants\Welcome;
+use App\Livewire\Tenants\ViewTenants;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Tenants\ManageTenants;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/home', Welcome::class)->name('central-home');
+Route::get('/central-view-tenants', ViewTenants::class)->name('central-view-tenants');
+Route::get('/central-manage-tenants', ManageTenants::class)->name('central-manage-tenants');
