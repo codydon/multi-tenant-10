@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            ProductsSeeder::class, // Replace with your seeder name
-            // ... other seeders
+            ProductsSeeder::class,
+            PermissionsSeeder::class,
         ]);
 
     }

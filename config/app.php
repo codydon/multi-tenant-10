@@ -171,6 +171,7 @@ return [
 
         //added
         App\Providers\TenancyServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
     ])->toArray(),
 
     /*

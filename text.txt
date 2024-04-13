@@ -1,0 +1,17 @@
+//migrate
+php artisan tenants:migrate
+php artisan tenants:migrate --tenant=1
+
+php artisan tenants:rollback
+php artisan tenants:rollback --tenant=1
+
+//seeding
+php artisan tenants:seed --tenant=<tenant_id>
+php artisan tenants:seed --tenant=1
+php artisan tenants:seed --tenant=bar
+
+//seeding all
+php artisan tenants:seed
+
+//updating permissions
+php artisan update:permissions

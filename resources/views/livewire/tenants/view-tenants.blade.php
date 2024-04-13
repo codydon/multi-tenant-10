@@ -1,13 +1,13 @@
-<div class="m-auto max-w-7xl p-5">
+<div class="p-5 m-auto max-w-7xl">
     @section('title')
         All tenants
     @endsection
-    <div class="flex justify-between items-center">
+    <div class="flex items-center justify-between">
         <div><x-bladewind::input label="Full name" /></div>
        <div class="flex items-center gap-2">
         <a class="text-red-500" href={{ route('central-home') }}>HOME</a>
          <a wire:navigate href={{ route('central-manage-tenants') }}
-            class="bg-blue-500 hover:bg-blue-700 px-4 py-4 flex gap-2 items-center rounded-md text-white">
+            class="flex items-center gap-2 px-4 py-4 text-white bg-blue-500 rounded-md hover:bg-blue-700">
             <x-bladewind::icon name="plus" />
             <span> Add tenant</span>
 
@@ -16,8 +16,8 @@
     </div>
 
 
-    <table class="table-auto min-w-full">
-        <thead class="bg-blue-900 text-white h-10">
+    <table class="min-w-full table-auto">
+        <thead class="h-10 text-white bg-blue-900">
             <th>SubDomain</th>
             <th>DB Name</th>
             <th>Created On</th>
@@ -35,10 +35,10 @@
                         @endphp
                         <a href="{{ $tenant_url }}" target="_blank" class="text-blue-500"> {{ $tenant->id }}</a>
                     </td>
-                    <td class=" text-center">
+                    <td class="text-center ">
                         {{ $tenant->tenancy_db_name }}
                     </td>
-                    <td class=" text-center">
+                    <td class="text-center ">
                         {{ $tenant->created_at->diffForHumans() }}
                     </td>
                 </tr>
@@ -46,31 +46,4 @@
         </tbody>
     </table>
 
-
-    {{-- <x-bladewind::table bg="yellow" striped="true" divider="thin" searchable="true"
-        search_placeholder="search by ..." name="staff-table" button_label="add staff member"
-        onclick="alert('add a staff')">
-
-        <x-slot name="header">
-            <th>SubDomain</th>
-            <th>DB Name</th>
-            <th>Created On</th>
-        </x-slot>
-        <div>
-            @foreach ($tenants as $tenant)
-                <tr>
-                    <td class="text-right">
-                        {{ $tenant->id }}
-                    </td>
-                    <td class=" text-right">
-                        {{ $tenant->tenancy_db_name }}
-                    </td>
-                    <td class=" text-right">
-                        {{ $tenant->created_at->diffForHumans() }}
-                    </td>
-                </tr>
-            @endforeach
-
-        </div>
-    </x-bladewind::table> --}}
 </div>

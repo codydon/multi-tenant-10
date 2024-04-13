@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.4",
         "mkocansey/bladewind": "^2.5",
+        "spatie/laravel-permission": "^6.4",
         "stancl/tenancy": "^3.8"
     },
     "require-dev": {
