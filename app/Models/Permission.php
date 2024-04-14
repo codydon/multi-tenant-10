@@ -6,7 +6,7 @@ use App\Models\PermissionGroup;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Permission\Models\Permission as SpartiePermission;
-use Stancl\Tenancy\Tenant as StlTenant;
+// use Stancl\Tenancy\Tenant;
 use App\Models\Tenant as TenantsModel;
 
 class Permission extends SpartiePermission
@@ -17,17 +17,26 @@ class Permission extends SpartiePermission
     {
         return $this->belongsTo(PermissionGroup::class, 'permissionGroupID');
     }
-    public static function loopOverTenantsMigrating()
+    public static function loopOverTenantsMigrating($tenant_id = null)
     {
-        $tenants = TenantsModel::all();
-        $instance = new self();
-        foreach ($tenants as $tenant) {
-            StlTenant::initialize($tenant.id);
-            StlTenant::end();
+        if ($tenant_id) {
+            $tenant = Tenant::find($tenant_id);
+            $package_id = TenantDetail::where('tenant_id', $tenant_id)->first()->package_id;
+            tenancy()->initialize($tenant);
+            return self::migratePermissions($package_id);
+        } else {
+            $switching = [];
+            $tenants = TenantsModel::all();
+            foreach ($tenants as $tenant) {
+                tenancy()->initialize($tenant);
+                $package_id = TenantDetail::where('tenant_id', $tenant->id)->first()->package_id;
+                $switching[$tenant->id] = self::migratePermissions($package_id);
+            }
+            return $switching;
         }
     }
 
-    public static function seedPermissions($package_id = 1)
+    public static function migratePermissions($package_id)
     {
         $incomingPermissions = self::permissionsToSeed();
 

@@ -29,7 +29,7 @@ class UpdatePermissionsCommand extends Command
     {
         $this->info('Updating permissions...');
 
-        Permission::loopOverTenantsMigrating();
+        Permission::loopOverTenantsMigrating('bar');
 
         $this->info('Permissions updated.');
     }

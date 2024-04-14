@@ -20,7 +20,10 @@
         <thead class="h-10 text-white bg-blue-900">
             <th>SubDomain</th>
             <th>DB Name</th>
-            <th>Created On</th>
+            <th>Current Package</th>
+            <th>Activated On</th>
+            <th>Expires On</th>
+            <th>Permissions</th>
         </thead>
         <tbody>
             @foreach ($tenants as $tenant)
@@ -36,10 +39,21 @@
                         <a href="{{ $tenant_url }}" target="_blank" class="text-blue-500"> {{ $tenant->id }}</a>
                     </td>
                     <td class="text-center ">
-                        {{ $tenant->tenancy_db_name }}
+                        {{ $tenant->tenant_name }}
                     </td>
                     <td class="text-center ">
-                        {{ $tenant->created_at->diffForHumans() }}
+                        {{ $tenant->package_name }}
+                    </td>
+                    <td class="text-center ">
+                        {{ $tenant->date_activated }}
+                    </td>
+                    <td class="text-center ">
+                        {{ $tenant->date_suspended }}
+                    </td>
+                    <td class="text-end">
+                        <span wire:click="syncPermissions({{ $tenant->id }})" class="px-4 py-2 text-blue-500 rounded-md cursor-pointer hover:text-blue-700">
+                            Sync Permissions
+                        </span>
                     </td>
                 </tr>
             @endforeach

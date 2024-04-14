@@ -3,6 +3,7 @@
 namespace App\Livewire\Tenants;
 
 use App\Models\Tenant;
+use App\Models\Package;
 use Livewire\Component;
 
 class ManageTenants extends Component
@@ -10,10 +11,12 @@ class ManageTenants extends Component
 
     public $domain='';
     public $tenant_name='';
+    public $package_id=0;
 
     protected $rules = [
         'domain' => 'required|string|min:3|max:20',
         'tenant_name' => 'required|string|min:3|max:20',
+        'package_id' => 'required|integer',
     ];
 
 
@@ -38,7 +41,8 @@ class ManageTenants extends Component
             return;
         }
 
-        $tenant = Tenant::createTenants($this->domain, $this->tenant_name);
+        // dd($this->domain, $this->tenant_name, $this->package_id);
+        $tenant = Tenant::createTenants($this->domain, $this->tenant_name, intval($this->package_id));
         $this->domain = '';
         $this->tenant_name = '';
 
@@ -46,6 +50,18 @@ class ManageTenants extends Component
     }
     public function render()
     {
-        return view('livewire.tenants.manage-tenants');
+
+        // $packages = Package::select('id as value', 'name as label')->get(); //coz bladewindul is expecting value and label
+        $packages = Package::select('id', 'name')->get();
+
+        // $pkgs = $packages->map(function ($package) {
+        //     return [
+        //         'label' => $package->name,
+        //         'value' => $package->id,
+        //     ];
+        // })->toArray();
+        // dd($pkgs);
+
+        return view('livewire.tenants.manage-tenants', compact('packages'));
     }
 }
