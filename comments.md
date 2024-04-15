@@ -1,5 +1,3 @@
-## routes/tenant.php
-## END OF routes/tenant.php
 ## resources/css/app.css
 ## END OF resources/css/app.css
 ## resources/views/components/layouts.blade.php
@@ -29,8 +27,6 @@
 ## END OF database/migrations/2024_04_13_144334_add_rows_to_permissions_table.php
 ## database/seeders/PermissionsSeeder.php
 ## END OF database/seeders/PermissionsSeeder.php
-## app/Models/Role.php
-## END OF app/Models/Role.php
 ## database/migrations/tenant/2024_04_13_144334_add_rows_to_permissions_table.php
 ## END OF database/migrations/tenant/2024_04_13_144334_add_rows_to_permissions_table.php
 ## text.txt
@@ -53,8 +49,6 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF database/seeders/DatabaseSeeder.php
 ## resources/views/livewire/tenants/manage-tenants.blade.php
 ## END OF resources/views/livewire/tenants/manage-tenants.blade.php
-## app/Livewire/Tenants/ManageTenants.php
-## END OF app/Livewire/Tenants/ManageTenants.php
 ## database/migrations/2019_09_15_000010_create_tenants_table.php
 ## END OF database/migrations/2019_09_15_000010_create_tenants_table.php
 ## database/migrations/2024_04_14_222803_create_tenant_details_table.php
@@ -63,19 +57,41 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF app/Models/TenantDetail.php
 ## app/Models/Tenant.php
 ## END OF app/Models/Tenant.php
-## app/Models/Permission.php
-## END OF app/Models/Permission.php
 ## database/migrations/tenant/2024_04_13_144321_create_permission_groups_table.php
 ## END OF database/migrations/tenant/2024_04_13_144321_create_permission_groups_table.php
-## app/Models/PermissionGroup.php
-## END OF app/Models/PermissionGroup.php
 ## app/Console/Commands/UpdatePermissionsCommand.php
 ## END OF app/Console/Commands/UpdatePermissionsCommand.php
-
-
+then add package_id to each permissions 
+on comparing, make sure that the user can have all permissions under them  eg: if one has 3, then he/she can have 1 and 2
+## app/Livewire/Tenants/ViewTenants.php
+## END OF app/Livewire/Tenants/ViewTenants.php
+## resources/views/components/loader.blade.php
+## END OF resources/views/components/loader.blade.php
+## public/loader.css
+## END OF public/loader.css
+## app/Models/Permission.php
+## END OF app/Models/Permission.php
+## app/Livewire/Tenants/PermissionsAllocator.php
+## END OF app/Livewire/Tenants/PermissionsAllocator.php
 ## resources/views/livewire/tenants/view-tenants.blade.php
 ## END OF resources/views/livewire/tenants/view-tenants.blade.php
+## resources/views/livewire/tenants/permissions-allocator.blade.php
+## END OF resources/views/livewire/tenants/permissions-allocator.blade.php
+## app/Livewire/Tenants/ManageTenants.php
+## END OF app/Livewire/Tenants/ManageTenants.php
+## routes/tenant.php
+## END OF routes/tenant.php
+## app/Livewire/Dashboards/Welcome.php
+## END OF app/Livewire/Dashboards/Welcome.php
+## app/Models/PermissionGroup.php
+## END OF app/Models/PermissionGroup.php
+## resources/views/livewire/dashboards/welcome.blade.php
+## END OF resources/views/livewire/dashboards/welcome.blade.php
+## app/Models/Role.php
+## END OF app/Models/Role.php
+## app/Livewire/Administrative/PermissionsAllocator.php
+## END OF app/Livewire/Administrative/PermissionsAllocator.php
 
-## app/Livewire/Tenants/ViewTenants.php
+## resources/views/livewire/administrative/permissions-allocator.blade.php
 
-## END OF app/Livewire/Tenants/ViewTenants.php
+## END OF resources/views/livewire/administrative/permissions-allocator.blade.php

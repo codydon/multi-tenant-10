@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Administrative\PermissionsAllocator;
+use App\Livewire\Dashboards\Welcome;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 
@@ -24,13 +26,16 @@ Route::middleware([
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
 
-    Route::get('/', function () {
-        dd(\App\Models\User::all());
-        return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
-    });
+    // Route::get('/', function () {
+    //     dd(\App\Models\User::all());
+    //     return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
+    // });
 
     Route::get('/products', function () {
         dd(\App\Models\Products::all());
         return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
     });
+
+    Route::get('/', Welcome::class)->name('welcome');
+    Route::get('/permissions-allocator/{role?}', PermissionsAllocator::class)->name('administrative-permissions-allocator');
 });

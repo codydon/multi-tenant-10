@@ -54,13 +54,7 @@ class ManageTenants extends Component
         // $packages = Package::select('id as value', 'name as label')->get(); //coz bladewindul is expecting value and label
         $packages = Package::select('id', 'name')->get();
 
-        // $pkgs = $packages->map(function ($package) {
-        //     return [
-        //         'label' => $package->name,
-        //         'value' => $package->id,
-        //     ];
-        // })->toArray();
-        // dd($pkgs);
+     
 
         return view('livewire.tenants.manage-tenants', compact('packages'));
     }

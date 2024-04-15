@@ -9,9 +9,14 @@ use Livewire\Component;
 class ViewTenants extends Component
 {
 
+    public function mount()
+    {
+        // dd('mount');
+    }
+
     public function syncPermissions($tenant_id)
     {
-        dd($tenant_id);
+        // dd($tenant_id);
         Permission::loopOverTenantsMigrating($tenant_id);
     }
 

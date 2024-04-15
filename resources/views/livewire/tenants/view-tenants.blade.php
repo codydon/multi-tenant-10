@@ -4,15 +4,15 @@
     @endsection
     <div class="flex items-center justify-between">
         <div><x-bladewind::input label="Full name" /></div>
-       <div class="flex items-center gap-2">
-        <a class="text-red-500" href={{ route('central-home') }}>HOME</a>
-         <a wire:navigate href={{ route('central-manage-tenants') }}
-            class="flex items-center gap-2 px-4 py-4 text-white bg-blue-500 rounded-md hover:bg-blue-700">
-            <x-bladewind::icon name="plus" />
-            <span> Add tenant</span>
+        <div class="flex items-center gap-2">
+            <a class="text-red-500" href={{ route('central-home') }}>HOME</a>
+            <a wire:navigate href={{ route('central-manage-tenants') }}
+                class="flex items-center gap-2 px-4 py-4 text-white bg-blue-500 rounded-md hover:bg-blue-700">
+                <x-bladewind::icon name="plus" />
+                <span> Add tenant</span>
 
-        </a>
-       </div>
+            </a>
+        </div>
     </div>
 
 
@@ -50,11 +50,17 @@
                     <td class="text-center ">
                         {{ $tenant->date_suspended }}
                     </td>
-                    <td class="text-end">
-                        <span wire:click="syncPermissions({{ $tenant->id }})" class="px-4 py-2 text-blue-500 rounded-md cursor-pointer hover:text-blue-700">
+                    <td class="flex gap-2 text-end">
+                        <div wire:loading wire:target="syncPermissions('{{ $tenant->id }}')">
+                            <x-loader />
+                        </div>
+                        <div wire:click="syncPermissions('{{ $tenant->id }}')"
+                            class="px-4 py-2 text-blue-500 rounded-md cursor-pointer hover:text-blue-700">
                             Sync Permissions
-                        </span>
+                        </div>
+
                     </td>
+
                 </tr>
             @endforeach
         </tbody>
