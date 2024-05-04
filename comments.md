@@ -91,7 +91,9 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF app/Models/Role.php
 ## app/Livewire/Administrative/PermissionsAllocator.php
 ## END OF app/Livewire/Administrative/PermissionsAllocator.php
-
 ## resources/views/livewire/administrative/permissions-allocator.blade.php
-
 ## END OF resources/views/livewire/administrative/permissions-allocator.blade.php
+
+## .env.example
+
+## END OF .env.example
