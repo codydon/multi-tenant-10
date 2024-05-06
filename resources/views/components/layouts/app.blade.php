@@ -21,17 +21,20 @@
 <body>
     <div>
         @if (session()->has('error'))
-            <div class="px-4 py-2 rounded text-white bg-red-500">
+            <div class="px-4 py-2 text-white bg-red-500 rounded">
                 {{ session('error') }}
             </div>
             @if (session()->has('success'))
-               <div class="px-4 py-2 rounded text-white bg-green-500">
+               <div class="px-4 py-2 text-white bg-green-500 rounded">
                     {{ session('success') }}
                 </div>
             @endif
 
         @endif
 
+    </div>
+    <div>
+        <livewire:navbar />
     </div>
     {{ $slot }}
 </body>

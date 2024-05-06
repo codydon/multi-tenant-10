@@ -9,8 +9,6 @@
 ## tailwind.config.js
 ## END OF tailwind.config.js
 .example
-## resources/views/components/layouts/app.blade.php
-## END OF resources/views/components/layouts/app.blade.php
 ## resources/views/livewire/tenants/welcome.blade.php
 ## END OF resources/views/livewire/tenants/welcome.blade.php
 ## README.md
@@ -19,8 +17,6 @@
 ## END OF config/app.php
 ## app/Models/User.php
 ## END OF app/Models/User.php
-## .env
-## END OF .env
 ## database/migrations/2024_04_13_144321_create_permission_groups_table.php
 ## END OF database/migrations/2024_04_13_144321_create_permission_groups_table.php
 ## database/migrations/2024_04_13_144334_add_rows_to_permissions_table.php
@@ -79,21 +75,34 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF resources/views/livewire/tenants/permissions-allocator.blade.php
 ## app/Livewire/Tenants/ManageTenants.php
 ## END OF app/Livewire/Tenants/ManageTenants.php
-## routes/tenant.php
-## END OF routes/tenant.php
-## app/Livewire/Dashboards/Welcome.php
-## END OF app/Livewire/Dashboards/Welcome.php
 ## app/Models/PermissionGroup.php
 ## END OF app/Models/PermissionGroup.php
-## resources/views/livewire/dashboards/welcome.blade.php
-## END OF resources/views/livewire/dashboards/welcome.blade.php
 ## app/Models/Role.php
 ## END OF app/Models/Role.php
 ## app/Livewire/Administrative/PermissionsAllocator.php
 ## END OF app/Livewire/Administrative/PermissionsAllocator.php
 ## resources/views/livewire/administrative/permissions-allocator.blade.php
 ## END OF resources/views/livewire/administrative/permissions-allocator.blade.php
+## config/tenancy.php
+## END OF config/tenancy.php
+.example
+## .env
+## END OF .env
+## app/Livewire/Tenant/Settings/Roles.php
+## END OF app/Livewire/Tenant/Settings/Roles.php
+## routes/tenant.php
+## END OF routes/tenant.php
+## resources/views/livewire/tenant/settings/roles.blade.php
+## END OF resources/views/livewire/tenant/settings/roles.blade.php
+## resources/views/livewire/dashboards/welcome.blade.php
+## END OF resources/views/livewire/dashboards/welcome.blade.php
+## app/Livewire/Dashboards/Welcome.php
+## END OF app/Livewire/Dashboards/Welcome.php
+## resources/views/components/layouts/app.blade.php
+## END OF resources/views/components/layouts/app.blade.php
+## app/Livewire/Navbar.php
+## END OF app/Livewire/Navbar.php
 
-## .env.example
+## resources/views/livewire/navbar.blade.php
 
-## END OF .env.example
+## END OF resources/views/livewire/navbar.blade.php

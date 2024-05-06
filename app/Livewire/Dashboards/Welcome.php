@@ -7,6 +7,8 @@ use Livewire\Component;
 
 class Welcome extends Component
 {
+
+    
     public function render()
     {
         $roles = Role::all();
