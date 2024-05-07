@@ -94,15 +94,15 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF routes/tenant.php
 ## resources/views/livewire/tenant/settings/roles.blade.php
 ## END OF resources/views/livewire/tenant/settings/roles.blade.php
-## resources/views/livewire/dashboards/welcome.blade.php
-## END OF resources/views/livewire/dashboards/welcome.blade.php
-## app/Livewire/Dashboards/Welcome.php
-## END OF app/Livewire/Dashboards/Welcome.php
 ## resources/views/components/layouts/app.blade.php
 ## END OF resources/views/components/layouts/app.blade.php
 ## app/Livewire/Navbar.php
 ## END OF app/Livewire/Navbar.php
-
 ## resources/views/livewire/navbar.blade.php
-
 ## END OF resources/views/livewire/navbar.blade.php
+## app/Livewire/Dashboards/Welcome.php
+## END OF app/Livewire/Dashboards/Welcome.php
+
+## resources/views/livewire/dashboards/welcome.blade.php
+
+## END OF resources/views/livewire/dashboards/welcome.blade.php
