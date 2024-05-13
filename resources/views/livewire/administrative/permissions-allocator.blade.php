@@ -42,10 +42,11 @@
                                             @switch($group['id'] === $permission['permissionGroupID'])
                                                 @case($permission['permissionGroupID'])
                                                     <div class="form-group">
-                                                        <div class="custom-control custom-checkbox" wire:click="togglePermission('{{ $permission['id'] }}')">
+                                                        <div class="custom-control custom-checkbox"
+                                                        wire:click="togglePermission('{{ $permission['id'] }}')"
+                                                        >
                                                             <input type="checkbox" class="bg-blue-500"
                                                                 id="{{ $permission['id'] }}" name="{{ $permission['id'] }}"
-
                                                                 value="{{ $permission['id'] }}" autocomplete="off"
                                                                 @if (in_array($permission['id'], $permissions)) checked @endif>
                                                             <label class="custom-control-label" for="{{ $permission['id'] }}"

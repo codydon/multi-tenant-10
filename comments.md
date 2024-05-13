@@ -6,11 +6,7 @@
 ## END OF app/Livewire/Tenants/Welcome.php
 ## routes/web.php
 ## END OF routes/web.php
-## tailwind.config.js
-## END OF tailwind.config.js
 .example
-## resources/views/livewire/tenants/welcome.blade.php
-## END OF resources/views/livewire/tenants/welcome.blade.php
 ## README.md
 ## END OF README.md
 ## config/app.php
@@ -79,10 +75,6 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF app/Models/PermissionGroup.php
 ## app/Models/Role.php
 ## END OF app/Models/Role.php
-## app/Livewire/Administrative/PermissionsAllocator.php
-## END OF app/Livewire/Administrative/PermissionsAllocator.php
-## resources/views/livewire/administrative/permissions-allocator.blade.php
-## END OF resources/views/livewire/administrative/permissions-allocator.blade.php
 ## config/tenancy.php
 ## END OF config/tenancy.php
 .example
@@ -102,7 +94,15 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF resources/views/livewire/navbar.blade.php
 ## app/Livewire/Dashboards/Welcome.php
 ## END OF app/Livewire/Dashboards/Welcome.php
-
 ## resources/views/livewire/dashboards/welcome.blade.php
-
 ## END OF resources/views/livewire/dashboards/welcome.blade.php
+## tailwind.config.js
+## END OF tailwind.config.js
+## resources/views/livewire/tenants/welcome.blade.php
+## END OF resources/views/livewire/tenants/welcome.blade.php
+## resources/views/livewire/administrative/permissions-allocator.blade.php
+## END OF resources/views/livewire/administrative/permissions-allocator.blade.php
+
+## app/Livewire/Administrative/PermissionsAllocator.php
+
+## END OF app/Livewire/Administrative/PermissionsAllocator.php

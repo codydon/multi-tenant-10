@@ -29,7 +29,12 @@ class PermissionsAllocator extends Component
     // public function mount($role = 1)
     {
         $this->role = $role;
-        $this->loadData();
+        if (!is_null($this->role)) {
+            $this->loadData();
+        }else{
+           return redirect()->route('tenant-settings-roles');
+        }
+
     }
 
     public function loadData()
@@ -38,6 +43,7 @@ class PermissionsAllocator extends Component
         $this->getOldPermissions();
         $this->comparePermissions();
         if (!is_null($this->role)) {
+            // dd($this->role);
             $this->roleData = Role::where('id', '=', $this->role)->get()->first();
             // dd($this->roleData);
         } else {
@@ -60,7 +66,7 @@ class PermissionsAllocator extends Component
     }
     public function togglePermission($permissionId)
     {
-        dd($permissionId);
+        dd("function togglePermission");
         //convert the permission to an integer
         $permissionId = (int) $permissionId;
         if (in_array($permissionId, $this->permissions)) {
