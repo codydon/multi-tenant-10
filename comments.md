@@ -47,8 +47,6 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF database/migrations/2024_04_14_222803_create_tenant_details_table.php
 ## app/Models/TenantDetail.php
 ## END OF app/Models/TenantDetail.php
-## app/Models/Tenant.php
-## END OF app/Models/Tenant.php
 ## database/migrations/tenant/2024_04_13_144321_create_permission_groups_table.php
 ## END OF database/migrations/tenant/2024_04_13_144321_create_permission_groups_table.php
 ## app/Console/Commands/UpdatePermissionsCommand.php
@@ -82,8 +80,6 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF .env
 ## app/Livewire/Tenant/Settings/Roles.php
 ## END OF app/Livewire/Tenant/Settings/Roles.php
-## routes/tenant.php
-## END OF routes/tenant.php
 ## resources/views/livewire/tenant/settings/roles.blade.php
 ## END OF resources/views/livewire/tenant/settings/roles.blade.php
 ## resources/views/components/layouts/app.blade.php
@@ -100,9 +96,17 @@ on comparing, make sure that the user can have all permissions under them  eg: i
 ## END OF tailwind.config.js
 ## resources/views/livewire/tenants/welcome.blade.php
 ## END OF resources/views/livewire/tenants/welcome.blade.php
+## app/Models/Tenant.php
+## END OF app/Models/Tenant.php
+## routes/tenant.php
+## END OF routes/tenant.php
+
+
 ## resources/views/livewire/administrative/permissions-allocator.blade.php
 ## END OF resources/views/livewire/administrative/permissions-allocator.blade.php
-
 ## app/Livewire/Administrative/PermissionsAllocator.php
-
 ## END OF app/Livewire/Administrative/PermissionsAllocator.php
+
+## storage/logs/laravel.log
+
+## END OF storage/logs/laravel.log

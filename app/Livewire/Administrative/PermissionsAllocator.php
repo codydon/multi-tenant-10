@@ -44,7 +44,9 @@ class PermissionsAllocator extends Component
         $this->comparePermissions();
         if (!is_null($this->role)) {
             // dd($this->role);
-            $this->roleData = Role::where('id', '=', $this->role)->get()->first();
+
+            Log::info("Role ID: " . $this->role);
+            $this->roleData = Role::where('id', '=', $this->role)->first();
             // dd($this->roleData);
         } else {
             $this->roleData = null;

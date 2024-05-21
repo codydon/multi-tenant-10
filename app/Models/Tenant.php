@@ -67,4 +67,9 @@ class Tenant extends BaseTenant implements TenantWithDatabase
 
         return $tenant;
     }
+
+    public static function getActiveTenantID()
+    {
+        return tenant();
+    }
 }

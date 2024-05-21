@@ -10,11 +10,11 @@
                             for
                             this role
                             <span class="font-bold underline uppercase text-danger ">
-                                @if (strpos($roleData->name, '_') !== false)
+                                {{-- @if (strpos($roleData->name, '_') !== false)
                                     {{ substr(strstr($roleData->name, '_'), 1) }}
                                 @else
                                     {{ $roleData->name }}
-                                @endif
+                                @endif --}}
                             </span>
                         </p>
                     </div>
@@ -75,7 +75,8 @@
                     <button class="px-4 py-2 text-white bg-blue-500 rounded" style="display: block"
                         wire:click.prevent="syncPermissions()">Update
                         Permissions for
-                        {{ $roleData['name'] }}</button>
+                        {{-- {{ $roleData['name'] }} --}}
+                    </button>
                     <a href="{{ route('welcome') }}" class="px-4 py-2 text-white bg-red-500 rounded">
                         Back to Roles</a>
                 </div>
